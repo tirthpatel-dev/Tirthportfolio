@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tirth's Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #111827;
+    }
+
+    .logo span {
+      background: var(--primary);
+      color: white;
+      border-radius: 12px;
+      padding: 0.3rem 0.65rem;
+      margin-right: 0.6rem;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      margin: 0 1.2rem;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #4f46e5;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: #1f2937;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.25rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 2.2rem;
+    }
+
+    .download-btn {
+      background: #eef2ff;
+      color: var(--text);
+      border: none;
+      padding: 0.9rem 1.6rem;
+      border-radius: 10px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .download-btn:hover {
+      background: #e0e7ff;
+    }
+
+   .hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  gap: 40px;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+    /* Projects Section */
+    #projects {
+      padding: 4rem 3rem;
+      text-align: center;
+      background-color: #f9fafb;
+    }
+
+    #projects h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    #projects p {
+      margin-top: 0.5rem;
+      color: #6b7280;
+      font-size: 1rem;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 0.75rem 0 0.25rem;
+    }
+
+    .project-card p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-icons a {
+      background-color: #f3f4f6;
+      padding: 0.8rem;
+      border-radius: 12px;
+      color: #6b7280;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .footer-icons a:hover {
+      background-color: #e5e7eb;
+      color: var(--primary);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      background: #f3f4f6;
+      padding: 0.6rem 0.8rem;
+      border-radius: 10px;
+      color: #111;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-img {
+        margin-top: 2rem;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span>T</span> Tirth's Portfolio
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn">Hire Me</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <h1>HI, I AM TIRTH</h1>
+      <p>A Frontend Developer &<br/>Design Enthusiast</p>
+      <button class="download-btn">
+        ⬇ Download CV
+      </button>
+    </div>
+    <div class="hero-img">
+      <img src="developer2.svg" alt="Developer Illustration" />
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects Portfolio</h2>
+    <p></p>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581091215367-59ab6f9f21e2" alt="Skylite" />
+        <div class="text">
+          <h3>Skylite</h3>
+          <p>Web Application</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1613215095098-019d339c1d76" alt="Lockify" />
+        <div class="text">
+          <h3>Lockify: The Secure Password Manager</h3>
+          <p>Mobile Application</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1586281380381-84c239ea0039" alt="Project UI" />
+        <div class="text">
+          <h3>Project Management UI</h3>
+          <p>UI/UX Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Follow me</h2>
+    <div class="footer-icons">
+      <a href="#"><i class="fas fa-globe"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Tirth Patel. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#top" class="back-to-top" title="Back to Top">↑</a>
+
+</body>
+</html>
